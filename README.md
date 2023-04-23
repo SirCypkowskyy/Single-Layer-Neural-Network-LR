@@ -92,5 +92,5 @@ Please note that the training process is not deterministic and the results may v
 
 * [PJAIT](https://www.pja.edu.pl/) - The Polish-Japanese Academy of Information Technology.
 * [Wikipedia](https://www.wikipedia.org/) - The free encyclopedia, from which the training data was taken.
-* [Cyprian Andrzej Gburek](https://sircypkowskyy.github.io/) - Author of the project.
+* [Cyprian Gburek](https://sircypkowskyy.github.io/) - Author of the project.
 
