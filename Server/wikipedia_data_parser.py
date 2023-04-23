@@ -44,6 +44,6 @@ for lang in contents_dict:
         if not os.path.exists(f'Data/{lang}'):
             os.makedirs(f'Data/{lang}')
         with open(f'Data/{lang}/{item}.txt', 'w', encoding='utf-8') as f:
-            f.write(contents_dict[lang][item][:int(smallest_size/2)])
+            f.write(contents_dict[lang][item][:int(smallest_size)])
 
 print('Done.')
