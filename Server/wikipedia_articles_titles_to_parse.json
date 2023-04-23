@@ -1,0 +1,45 @@
+{
+  "beer": {
+    "en": "Beer",
+    "de": "Bier",
+    "es": "Cerveza",
+    "pl": "Piwo"
+  },
+  "wine": {
+    "en": "Wine",
+    "de": "Wein",
+    "es": "Vino",
+    "pl": "Wino"
+  },
+  "water": {
+        "en": "Water",
+        "de": "Wasser",
+        "es": "Agua",
+        "pl": "Woda"
+    },
+  "war":
+    {
+        "en": "War",
+        "de": "Krieg",
+        "es": "Guerra",
+        "pl": "Wojna"
+    },
+  "milk": {
+    "en": "Milk",
+    "de": "Milch",
+    "es": "Leche",
+    "pl": "Mleko"
+  },
+  "sky": {
+    "en": "Sky",
+    "de": "Himmel",
+    "es": "Cielo",
+    "pl": "Niebo"
+  },
+  "pizza": {
+    "en": "Pizza",
+    "de": "Pizza",
+    "es": "Pizza",
+    "pl": "Pizza"
+  }
+}
