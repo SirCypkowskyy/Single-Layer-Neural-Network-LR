@@ -54,7 +54,7 @@ function LanguageBarChart(props) {
       },
       formatter: function (val, opt) {
         return (
-          opt.w.globals.labels[opt.dataPointIndex] + ":  " + val * 100 + "%"
+          opt.w.globals.labels[opt.dataPointIndex] + ":  " + Math.round(val * 100) + "%"
         );
       },
       offsetX: 0,
