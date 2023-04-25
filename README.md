@@ -55,7 +55,7 @@ Server initializes the neural network and exposes an API for the client to use (
     - `PORT`: The port number to run the server on.
     - `NEURAL_NETWORK_DATA_PATH`: The path to the neural network data folder.
     - `NEURAL_NETWORK_LEARNING_RATE`: The learning rate of the neural network's perceptrons.
-    - `NEURAL_NETWORK_BIAS`: The bias of the neural network's perceptrons.
+    - `NEURAL_NETWORK_BIAS`: The starting threshold / bias of the neural network's perceptrons.
     - `NEURAL_NETWORK_EPOCHS`: The number of epochs to train the neural network for.
     3. Run `main.py` to start the server.
     4. Wait for the neural network to train.

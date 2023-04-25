@@ -119,13 +119,14 @@ class NeuralNetwork:
                 result[current_index] = char_map[chr(i)] / char_count
             else:
                 result[current_index] = 0.0
-        result[26] = -1.0
+        result.append(-1.0)
         return result
 
     def get_attributues_values_for_string(self, input_string: str):
         """
         Funkcja zwracająca wektor występowania liter w stringu
         :param input_string: string do testowania
+        :return: wektor występowania liter w stringu
         """
         result = [0.0 for _ in range(27)]
         char_map = {}
@@ -140,13 +141,14 @@ class NeuralNetwork:
         for i in range(97, 123):
             current_index = int(i - 97)
             result[current_index] = char_map[chr(i)] / char_count
-        result[26] = -1.0
+        result.append(-1.0)
         return result
 
     def get_input_lang_dotproducts(self, input_string: str) -> []:
         """
-        Funkcja zwracająca język podanego stringa
+        Funkcja zwracająca dotproduct dla testu dla każdego perceptronu
         :param input_string: string do sprawdzenia
+        :return: słownik z wartościami dotproduct dla każdego perceptronu w postaci {lang: dotproduct}
         """
         result_from_testing = self.get_attributues_values_for_string(input_string)
         langs_with_nets = {}

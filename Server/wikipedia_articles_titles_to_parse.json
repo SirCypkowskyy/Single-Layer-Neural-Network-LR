@@ -30,16 +30,34 @@
     "es": "Leche",
     "pl": "Mleko"
   },
-  "sky": {
-    "en": "Sky",
-    "de": "Himmel",
-    "es": "Cielo",
-    "pl": "Niebo"
+  "alchemy": {
+    "en": "Alchemy",
+    "de": "Alchemie",
+    "es": "Alquimia",
+    "pl": "Alchemia"
   },
-  "pizza": {
-    "en": "Pizza",
-    "de": "Pizza",
-    "es": "Pizza",
-    "pl": "Pizza"
+    "magic": {
+        "en": "Magic",
+        "de": "Magie",
+        "es": "Magia",
+        "pl": "Magia"
+    },
+  "art": {
+    "en": "Art",
+    "de": "Kunst",
+    "es": "Arte",
+    "pl": "Sztuka"
+  },
+  "architecture": {
+    "en": "Architecture",
+    "de": "Architektur",
+    "es": "Arquitectura",
+    "pl": "Architektura"
+  },
+  "history": {
+    "en": "History",
+    "de": "Geschichte",
+    "es": "Historia",
+    "pl": "Historia"
   }
 }
