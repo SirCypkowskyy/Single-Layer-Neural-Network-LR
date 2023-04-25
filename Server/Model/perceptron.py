@@ -4,12 +4,11 @@ from datetime import datetime
 
 
 class Perceptron:
-    def __init__(self, vector_size: int, learning_rate: float, starting_bias: float, decisive_attribute: str, debug: bool = False):
+    def __init__(self, vector_size: int, learning_rate: float, threshold: float, decisive_attribute: str, debug: bool = False):
         self.weights = [random.random() for _ in range(vector_size)]
         self.learning_rate = learning_rate
         self.decisive_attribute = decisive_attribute
-        self.starting_bias = starting_bias
-        self.weights.append(starting_bias)
+        self.threshold = threshold
         self.debug = debug
         self.is_trained = False
         if self.debug:
@@ -19,18 +18,23 @@ class Perceptron:
         return sum([x * y for x, y in zip(inputs, self.weights)])
 
     def get_net(self, inputs):
-        return 1 if self.dot_product(inputs) >= 0 else 0
+        return 1 if self.dot_product(inputs) >= self.threshold else 0
 
     def train(self, inputs, expected_language):
         if self.is_trained:
             return
+
+        self.weights.append(self.threshold)
         d = 1 if expected_language == self.decisive_attribute else 0
         y = self.get_net(inputs)
 
         # dodajemy bias do wektora wejściowego
-        inputs.append(self.starting_bias)
+        inputs.append(-1)
         for i in range(len(self.weights)):
             self.weights[i] = self.weights[i] + self.learning_rate * (d - y) * inputs[i]
+        inputs.pop()
+        self.threshold = self.weights.pop()
+
 
     def __str__(self):
         weights_with_letters = []

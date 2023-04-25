@@ -8,21 +8,21 @@ from datetime import datetime
 
 
 class NeuralNetwork:
-    def __init__(self, folder_path: os.path, learning_rate, starting_bias, max_epochs=1000, debug: bool = False):
+    def __init__(self, folder_path: os.path, learning_rate, starting_threshold, max_epochs=1000, debug: bool = False):
         self.perceptrons = []
         self.debug = debug
         self.langs_with_files = []
 
         if self.debug:
             rprint(f"({datetime.now()})(Neural Network) Learning rate: {learning_rate}")
-            rprint(f"({datetime.now()})(Neural Network) Starting bias: {starting_bias}")
+            rprint(f"({datetime.now()})(Neural Network) Starting threshold / bias: {starting_threshold}")
             rprint(f"({datetime.now()})(Neural Network) Max epochs: {max_epochs}")
 
         folders = os.listdir(folder_path)
 
         for folder in folders:
             folder_name = os.path.basename(folder)
-            self.perceptrons.append(Perceptron(27, learning_rate, starting_bias, folder_name, debug))
+            self.perceptrons.append(Perceptron(27, learning_rate, starting_threshold, folder_name, debug))
             files_in_folder = os.listdir(os.path.join(folder_path, folder))
             for file in files_in_folder:
                 file_path = os.path.join(os.path.join(folder_path, folder), file)
