@@ -57,7 +57,7 @@ Server initializes the neural network and exposes an API for the client to use (
    - `PORT`: The port number to run the server on.
    - `NEURAL_NETWORK_DATA_PATH`: The path to the neural network data folder.
    - `NEURAL_NETWORK_LEARNING_RATE`: The learning rate of the neural network's perceptrons.
-   - `NEURAL_NETWORK_BIAS`: The starting bias / threshold of the neural network's perceptrons.
+   - `NEURAL_NETWORK_BIAS`: The starting bias /threshold of the neural network's perceptrons.
    - `NEURAL_NETWORK_EPOCHS`: The number of max epochs to train the neural network for.
    - `NEURAL_NETWORK_CONVERT_TO_ASCII`: Whether to convert non-standard latin characters to their ASCII equivalent with Unidecode library or to skip them.
    3. Run `main.py` to start the server.
@@ -71,7 +71,7 @@ Server initializes the neural network and exposes an API for the client to use (
 
 ## Results
 
-The neural network was trained on 10 files with 400 characters each. The training process took about ~15 seconds on average. The network was able to recognize the language of the text with significant accuracy (especially for longer texts). The results are displayed on the screenshots below.
+The neural network was trained on 10 files with 400 characters each. The training process took about few seconds on average. The network was able to recognize the language of the text with significant accuracy (especially for longer texts). The example results are displayed on the screenshots below.
 
 <div align="center">
 
@@ -89,7 +89,7 @@ The neural network was trained on 10 files with 400 characters each. The trainin
 
 </div>
 
-Please note that the training process is not deterministic and the results may vary after each training. The network may also be trained on more files to improve the accuracy of the results, which is recommended.
+Please note that the training process is not deterministic and the results may vary after each training. The network may also be trained on more files to improve the accuracy of the results, which is highly recommended.
 
 ## Credits
 

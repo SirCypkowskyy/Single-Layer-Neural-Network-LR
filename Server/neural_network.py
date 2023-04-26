@@ -144,6 +144,11 @@ class NeuralNetwork:
             if char_map.__contains__(char):
                 char_map[char] += 1
                 char_count += 1
+            elif self.neural_network_convert_to_ascii:
+                char = unidecode.unidecode(char)
+                if char_map.__contains__(char):
+                    char_map[char] += 1
+                    char_count += 1
         for i in range(97, 123):
             current_index = int(i - 97)
             result[current_index] = char_map[chr(i)] / char_count

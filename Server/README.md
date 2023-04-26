@@ -20,7 +20,7 @@ This is a simple server that uses a single layer neural network to predict the l
 ### Setup
 
 1. Configure your own Conda environment with Python 3.10 and install the dependencies from 'requirements.txt'.
-2. Create `.env` file in the root directory and add the following environment variables:
+2. Create `.env` file in the root directory and add the following environment variables (like in [.env.example](.env.example)):
    - `PORT`: The port number to run the server on.
    - `NEURAL_NETWORK_DATA_PATH`: The path to the neural network data folder.
    - `NEURAL_NETWORK_LEARNING_RATE`: The learning rate of the neural network's perceptrons.
