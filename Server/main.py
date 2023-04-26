@@ -14,6 +14,7 @@ neural_network_data_path = None
 neural_network_learning_rate = None
 neural_network_epochs = None
 neural_network_bias = None
+neural_network_convert_to_ascii = None
 
 
 if __name__ == '__main__':
@@ -34,6 +35,11 @@ if __name__ == '__main__':
                 neural_network_epochs = int(line_value)
             case 'NEURAL_NETWORK_BIAS':
                 neural_network_bias = float(line_value)
+            case 'NEURAL_NETWORK_CONVERT_TO_ASCII':
+                if line_value == 'True':
+                    neural_network_convert_to_ascii = True
+                elif line_value == 'False':
+                    neural_network_convert_to_ascii = False
             case 'DEBUG':
                 debug = bool(line_value)
     rprint("[bold green]Environment variables loaded![/bold green]")
@@ -47,10 +53,10 @@ if __name__ == '__main__':
 
         if neural_network_epochs is None:
             program_neural_network = NeuralNetwork(neural_network_data_path, neural_network_learning_rate,
-                                                   neural_network_bias, debug=debug)
+                                                   neural_network_bias, neural_network_convert_to_ascii, debug=debug)
         else:
             program_neural_network = NeuralNetwork(neural_network_data_path, neural_network_learning_rate,
-                                                   neural_network_bias, neural_network_epochs, debug=debug)
+                                                   neural_network_bias, neural_network_convert_to_ascii, neural_network_epochs, debug=debug)
 
         rprint("[bold green]Neural network generated![/bold green]")
 

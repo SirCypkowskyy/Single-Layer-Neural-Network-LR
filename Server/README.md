@@ -25,7 +25,8 @@ This is a simple server that uses a single layer neural network to predict the l
    - `NEURAL_NETWORK_DATA_PATH`: The path to the neural network data folder.
    - `NEURAL_NETWORK_LEARNING_RATE`: The learning rate of the neural network's perceptrons.
    - `NEURAL_NETWORK_BIAS`: The starting bias / threshold of the neural network's perceptrons.
-   - `NEURAL_NETWORK_EPOCHS`: The number of epochs to train the neural network for.
+   - `NEURAL_NETWORK_EPOCHS`: The number of max epochs to train the neural network for.
+   - `NEURAL_NETWORK_CONVERT_TO_ASCII`: Whether to convert non-standard latin characters to their ASCII equivalent with Unidecode library or to skip them.
 3. (Optional) Remove all files from [Data](data) folder
 4. (Optional) Edit the [wikipedia article titles to parse](wikipedia_articles_titles_to_parse.json) file to add or remove articles to parse with the Wikipedia API.
 5. (Optional) Run [wikipedia_data_parser.py](wikipedia_data_parser.py) to parse the Wikipedia API and create the neural network training data files.

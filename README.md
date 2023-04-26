@@ -57,8 +57,9 @@ Server initializes the neural network and exposes an API for the client to use (
    - `PORT`: The port number to run the server on.
    - `NEURAL_NETWORK_DATA_PATH`: The path to the neural network data folder.
    - `NEURAL_NETWORK_LEARNING_RATE`: The learning rate of the neural network's perceptrons.
-   - `NEURAL_NETWORK_BIAS`: The starting threshold / bias of the neural network's perceptrons.
-   - `NEURAL_NETWORK_EPOCHS`: The number of epochs to train the neural network for.
+   - `NEURAL_NETWORK_BIAS`: The starting bias / threshold of the neural network's perceptrons.
+   - `NEURAL_NETWORK_EPOCHS`: The number of max epochs to train the neural network for.
+   - `NEURAL_NETWORK_CONVERT_TO_ASCII`: Whether to convert non-standard latin characters to their ASCII equivalent with Unidecode library or to skip them.
    3. Run `main.py` to start the server.
    4. Wait for the neural network to train.
    5. Your server should now be running on the port you specified in the `.env` file.

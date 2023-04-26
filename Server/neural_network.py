@@ -8,7 +8,10 @@ from datetime import datetime
 
 
 class NeuralNetwork:
-    def __init__(self, folder_path: os.path, learning_rate, starting_threshold, max_epochs=1000, debug: bool = False):
+    def __init__(self, folder_path: os.path, learning_rate, starting_threshold, neural_network_convert_to_ascii : bool, max_epochs=1000, debug: bool = False):
+        self.neural_network_convert_to_ascii = False
+        if neural_network_convert_to_ascii is not None:
+            self.neural_network_convert_to_ascii = neural_network_convert_to_ascii
         self.perceptrons = []
         self.debug = debug
         self.langs_with_files = []
@@ -108,9 +111,12 @@ class NeuralNetwork:
                 for char in line:
                     # check if char is a special char
                     if char not in char_map:
-                        char = unidecode.unidecode(char)
-                        if char not in char_map:
+                        if not self.neural_network_convert_to_ascii:
                             continue
+                        else:
+                            char = unidecode.unidecode(char)
+                            if char not in char_map:
+                                continue
                     char_map[char] += 1
                     char_count += 1
         for i in range(97, 123):
