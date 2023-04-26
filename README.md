@@ -2,7 +2,7 @@
 
 # Single Layer Neural Network (Language Recognition)
 
-<img src="https://sklep.pja.edu.pl/wp-content/uploads/2017/03/PJATK_shop-1.png" width="50%"></img>
+<img src="./static/pjatk_logo.png" width="50%"></img>
 
 ## PJAIT -  Artificial Intelligence Tools (NAI)
 

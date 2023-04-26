@@ -1,4 +1,11 @@
 # Single Layer Neural Network
+
+<div align="center">
+
+<img src="../static/pjatk_logo.png" width="50%"></img>
+
+</div>
+
 ### Client
 
 This is a simple Vite.js application that allows the user to input a text and send it to the server for language recognition. The client also displays the results of the recognition with Apexcharts graph.
@@ -15,7 +22,6 @@ This is a simple Vite.js application that allows the user to input a text and se
 3. Make sure server is running and finished training the neural network.
 4. Run `npm run dev` to start the client.
 5. Viola! Your client should now be running on the port specified in the terminal.
-
 
 ### Usage
 
