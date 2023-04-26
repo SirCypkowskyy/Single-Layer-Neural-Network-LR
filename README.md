@@ -29,7 +29,7 @@ The aim of this project was to create a single layer neural network that would b
 
 ## Technologies
 
-### [Server side](./server/):
+### [Server side](./Server/):
 
 - [Python 3.10](https://www.python.org/)
 - [Unidecode](https://pypi.org/project/Unidecode/) for text normalization (removal of language specific characters).
