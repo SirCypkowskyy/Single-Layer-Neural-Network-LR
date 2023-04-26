@@ -45,9 +45,9 @@ class RequestHandler(BaseHTTPRequestHandler):
         if 'input' in params:
             # jeżeli tak to przekazujemy dane do sieci
             print('Input: ' + str(params['input']))
-            wynik = self.neural_network.get_input_lang_dotproducts(params['input'])
-            print('Wynik: ' + str(wynik))
-            self.wfile.write(json.dumps(wynik).encode('utf-8'))
+            output = self.neural_network.get_input_lang_dotproducts(params['input'])
+            print('Output: ' + str(output))
+            self.wfile.write(json.dumps(output).encode('utf-8'))
         else:
             self.wfile.write(json.dumps(params).encode('utf-8'))
 
