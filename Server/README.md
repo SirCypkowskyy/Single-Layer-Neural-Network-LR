@@ -35,7 +35,7 @@ This is a simple server that uses a single layer neural network to predict the l
 
 The server exposes the following API endpoints:
 
-- `GET /?input=<user input>`: Returns the predicted language of the given user input.
+- `GET /?input=<user input>`: Returns the predicted languages dot product values for the given input. The higher the value, the more likely the text is in that language. The response is in JSON format.
 
 ### License
 
