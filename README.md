@@ -46,7 +46,7 @@ The aim of this project was to create a single layer neural network that would b
 - [React-use](https://github.com/streamich/react-use) for React hooks.
 - [Apexcharts](https://apexcharts.com/) for displaying the results.
 
-Server initializes the neural network and exposes an API for the client to use (more info [here](./server/README.md)). Client is a simple Vite.js application that allows the user to input a text and send it to the server for language recognition. The client also displays the results of the recognition with Apexcharts graph.
+Server initializes the neural network and exposes an API for the client to use (more info [here](./Server/README.md)). Client is a simple Vite.js application that allows the user to input a text and send it to the server for language recognition. The client also displays the results of the recognition with Apexcharts graph.
 
 ## Setup
 
