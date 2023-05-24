@@ -9,6 +9,15 @@ from datetime import datetime
 
 class NeuralNetwork:
     def __init__(self, folder_path: os.path, learning_rate, starting_threshold, neural_network_convert_to_ascii : bool, max_epochs=1000, debug: bool = False):
+        """
+        Sieć neuronowa, która składa się z perceptronów, które są odpowiedzialne za rozpoznawanie języka.
+        :param folder_path: ścieżka do folderu z danymi do uczenia sieci
+        :param learning_rate: współczynnik uczenia
+        :param starting_threshold: początkowy próg / bias
+        :param neural_network_convert_to_ascii: czy zmieniać znaki specjalne danego języka na znaki ASCII (jeśli False, to znaki specjalne są pomijane)
+        :param max_epochs: maksymalna liczba epok uczenia
+        :param debug: czy wypisywać informacje w trybie debug
+        """
         self.neural_network_convert_to_ascii = False
         if neural_network_convert_to_ascii is not None:
             self.neural_network_convert_to_ascii = neural_network_convert_to_ascii

@@ -4,6 +4,12 @@ import json
 
 
 def get_wikipedia_page(title, wiki_lang='en'):
+    """
+    Funkcja pobierająca dane ze strony wikipedia w formacie json
+    :param title: tytuł strony
+    :param wiki_lang: język strony (domyślnie angielski)
+    :return: artykuł w formacie json
+    """
     response = requests.get(f'https://{wiki_lang}.wikipedia.org/w/api.php', params={
         'action': 'query',
         'format': 'json',

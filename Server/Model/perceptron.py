@@ -6,6 +6,14 @@ from datetime import datetime
 class Perceptron:
     def __init__(self, vector_size: int, learning_rate: float, threshold: float, decisive_attribute: str,
                  debug: bool = False):
+        """
+        Perceptron służący do klasyfikacji języków
+        :param vector_size: ilość wejść
+        :param learning_rate: współczynnik uczenia
+        :param threshold: próg / bias
+        :param decisive_attribute: atrybut decyzyjny
+        :param debug: czy wypisywać informacje w trybie debug
+        """
         self.weights = [random.random() for _ in range(vector_size)]
         self.learning_rate = learning_rate
         self.decisive_attribute = decisive_attribute
@@ -17,15 +25,30 @@ class Perceptron:
                 f"({datetime.now()})(Perceptron {decisive_attribute}) Perceptron for language: {decisive_attribute} created")
 
     def dot_product(self, inputs):
+        """
+        Oblicza iloczyn skalarny wektorów
+        :param inputs: wektor wejściowy
+        :return: iloczyn skalarny wektorów
+        """
         if len(inputs) != len(self.weights):
             # dodajemy bias do wag, gdy chcemy uzyskać dotproduct poza etapem uczenia
             return sum([x * y for x, y in zip(inputs, self.weights + [self.threshold])])
         return sum([x * y for x, y in zip(inputs, self.weights)])
 
     def get_net(self, inputs):
+        """
+        Funkcja interpretująca wynik iloczynu skalarnego
+        :param inputs: wektor wejściowy
+        :return: 1 jeśli iloczyn skalarny >= threshold, 0 w przeciwnym wypadku
+        """
         return 1 if self.dot_product(inputs) >= self.threshold else 0
 
     def train(self, inputs, expected_language):
+        """
+        Funkcja ucząca perceptron
+        :param inputs: wektor wejściowy
+        :param expected_language: oczekiwany język (atrybut decyzyjny)
+        """
         if self.is_trained:
             return
 
