@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "server"
+version = "0.1.0"
+description = ""
+authors = ["Cyprian Gburek <cypkowski@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pip = "23.0.1=py310haa95532_0"
+setuptools = "66.0.0=py310haa95532_0"
+Unidecode = "1.2.0=pyhd3eb1b0_0"
+DateTime = "^5.1"
+urllib3 = "^2.0.3"
+requests = "^2.31.0"
+rich = "^13.4.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
