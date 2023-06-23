@@ -52,7 +52,7 @@ Server initializes the neural network and exposes an API for the client to use (
 
 1. Clone the repository.
 2. Server:
-   1. Configure your own Conda environment with Python 3.10 and install the dependencies from 'requirements.txt'.
+   1. Configure your own Conda environment with Python 3.10 and install the dependencies from `requirements.txt` or with Poetry.
    2. Create `.env` file in the root directory and add the following environment variables (based on the [env.example](./Server/.env.example) file):
    - `PORT`: The port number to run the server on.
    - `NEURAL_NETWORK_DATA_PATH`: The path to the neural network data folder.
