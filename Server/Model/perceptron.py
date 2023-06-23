@@ -8,6 +8,7 @@ class Perceptron:
                  debug: bool = False):
         """
         Perceptron służący do klasyfikacji języków
+
         :param vector_size: ilość wejść
         :param learning_rate: współczynnik uczenia
         :param threshold: próg / bias
@@ -27,6 +28,7 @@ class Perceptron:
     def dot_product(self, inputs):
         """
         Oblicza iloczyn skalarny wektorów
+
         :param inputs: wektor wejściowy
         :return: iloczyn skalarny wektorów
         """
@@ -38,6 +40,7 @@ class Perceptron:
     def get_net(self, inputs):
         """
         Funkcja interpretująca wynik iloczynu skalarnego
+
         :param inputs: wektor wejściowy
         :return: 1 jeśli iloczyn skalarny >= threshold, 0 w przeciwnym wypadku
         """
@@ -46,6 +49,7 @@ class Perceptron:
     def train(self, inputs, expected_language):
         """
         Funkcja ucząca perceptron
+
         :param inputs: wektor wejściowy
         :param expected_language: oczekiwany język (atrybut decyzyjny)
         """

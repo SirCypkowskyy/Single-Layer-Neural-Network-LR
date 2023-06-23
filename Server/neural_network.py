@@ -11,6 +11,7 @@ class NeuralNetwork:
     def __init__(self, folder_path: os.path, learning_rate, starting_threshold, neural_network_convert_to_ascii : bool, max_epochs=1000, debug: bool = False):
         """
         Sieć neuronowa, która składa się z perceptronów, które są odpowiedzialne za rozpoznawanie języka.
+
         :param folder_path: ścieżka do folderu z danymi do uczenia sieci
         :param learning_rate: współczynnik uczenia
         :param starting_threshold: początkowy próg / bias
@@ -96,6 +97,7 @@ class NeuralNetwork:
     def train_perceptron(self, perceptron: Perceptron):
         """
         Funkcja ucząca sieć z podanego folderu
+
         :param perceptron: perceptron do nauki
         """
         random.shuffle(self.langs_with_files)
@@ -108,6 +110,7 @@ class NeuralNetwork:
     def read_file(self, file_path: os.path) -> list[float]:
         """
         Funkcja odczytująca plik i zwracająca wektor występowania liter w pliku
+
         :param file_path: ścieżka do pliku
         """
         char_map = {}
@@ -140,6 +143,7 @@ class NeuralNetwork:
     def get_attributues_values_for_string(self, input_string: str):
         """
         Funkcja zwracająca wektor występowania liter w stringu
+
         :param input_string: string do testowania
         :return: wektor występowania liter w stringu
         """
@@ -167,6 +171,7 @@ class NeuralNetwork:
     def get_input_lang_dotproducts(self, input_string: str) -> []:
         """
         Funkcja zwracająca dotproduct dla testu dla każdego perceptronu
+
         :param input_string: string do sprawdzenia
         :return: słownik z wartościami dotproduct dla każdego perceptronu w postaci {lang: dotproduct}
         """

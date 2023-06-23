@@ -54,6 +54,7 @@ class RequestHandler(BaseHTTPRequestHandler):
     def parse_param_value(self, param: str):
         """
         Parsuje wartość parametru wartości
+
         :param param: wartość parametru
         :return: zwraca wartość parametru
         """
